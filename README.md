@@ -6,21 +6,24 @@ Personal Deep-ML practice by [Lawson Dong](https://github.com/Lawson-Dong), docu
 
 | Easy | Medium | Hard | Total |
 |---|---|---|---|
-| 0 | 2 | 0 | 2 |
+| 0 | 3 | 0 | 3 |
 
 ## Problem Index
 
 | # | Problem | Difficulty | Topics | Approach | Time | Extra Space | Notes | Code |
 |---|---|---|---|---|---|---|---|---|
+| 014 | [Linear Regression Using Normal Equation](https://www.deep-ml.com/problems/14) | Medium | Machine Learning, Linear Regression, PyTorch, Least Squares | Direct least squares with `torch.linalg.lstsq` | O(mn²) | O(mn) | [README](medium/014/README.md) | [Python](medium/014/solution_v1.py) |
 | 015 | [Linear Regression Using Gradient Descent](https://www.deep-ml.com/problems/15) | Medium* | Machine Learning, Linear Regression, PyTorch, Autograd | Full-batch SGD with autograd | O(Tmn) | O(m + n) | [README](medium/015/README.md) | [Python](medium/015/solution_v1.py) |
 | 1223 | [Gradient of a Weighted Sum of Squares](https://www.deep-ml.com/problems/1223) | Medium | PyTorch, Autograd, Element-wise Operations | Autograd on a scalar sum of squares | O(n) | O(n) | [README](medium/1223/README.md) | [Python](medium/1223/solution_v1.py) |
 
-Here, `T` is the number of iterations, `m` is the number of samples, and `n` is the number of input features, including the intercept column. Space excludes input storage and any tensor conversion copies. For problem 1223, `n` is the input vector length.
+Here, `T` is the number of iterations, `m` is the number of samples, and `n` is the number of input features, including the intercept column. Space excludes input storage and any tensor conversion copies. Problem 014's complexity bounds assume `m >= n`. For problem 1223, `n` is the input vector length.
 
 *Difficulty follows the supplied problem screenshot. The current public page labels this problem Easy; platform labels and language variants may differ.*
 
 ## Repository Structure
 
+- `medium/014/README.md`: normal-equation problem, example, solution explanation, and personal reflection.
+- `medium/014/solution_v1.py`: the author's PyTorch least-squares implementation.
 - `medium/015/README.md`: problem description, example, solution explanation, and personal reflection.
 - `medium/015/solution_v1.py`: the author's provided PyTorch approach, with minor cleanup.
 - `medium/1223/README.md`: weighted sum of squares problem, example, solution, and reflection.

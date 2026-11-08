@@ -6,18 +6,19 @@ Personal Deep-ML practice by [Lawson Dong](https://github.com/Lawson-Dong), docu
 
 | Easy | Medium | Hard | Total |
 |---|---|---|---|
-| 1 | 3 | 0 | 4 |
+| 2 | 3 | 0 | 5 |
 
 ## Problem Index
 
 | # | Problem | Difficulty | Topics | Approach | Time | Extra Space | Notes | Code |
 |---|---|---|---|---|---|---|---|---|
 | 001 | [Matrix-Vector Dot Product](https://www.deep-ml.com/problems/1) | Easy | Linear Algebra, PyTorch | Matrix–vector multiplication with `@` | O(mn) | O(m) | [README](easy/001/README.md) | [Python](easy/001/solution_v1.py) |
+| 002 | [Transpose of a Matrix](https://www.deep-ml.com/problems/2) | Easy | Linear Algebra, PyTorch | Transposed view with `.T` | O(1) | O(1) | [README](easy/002/README.md) | [Python](easy/002/solution_v1.py) |
 | 014 | [Linear Regression Using Normal Equation](https://www.deep-ml.com/problems/14) | Medium | Machine Learning, Linear Regression, PyTorch, Least Squares | Direct least squares with `torch.linalg.lstsq` | O(mn²) | O(mn) | [README](medium/014/README.md) | [Python](medium/014/solution_v1.py) |
 | 015 | [Linear Regression Using Gradient Descent](https://www.deep-ml.com/problems/15) | Medium* | Machine Learning, Linear Regression, PyTorch, Autograd | Full-batch SGD with autograd | O(Tmn) | O(m + n) | [README](medium/015/README.md) | [Python](medium/015/solution_v1.py) |
 | 1223 | [Gradient of a Weighted Sum of Squares](https://www.deep-ml.com/problems/1223) | Medium | PyTorch, Autograd, Element-wise Operations | Autograd on a scalar sum of squares | O(n) | O(n) | [README](medium/1223/README.md) | [Python](medium/1223/solution_v1.py) |
 
-Here, `T` is the number of iterations, `m` is the number of samples, and `n` is the number of input features, including the intercept column. For problem 001, `m` and `n` are the matrix row and column counts. Space excludes input storage and any tensor conversion copies. Problem 014's complexity bounds assume `m >= n`. For problem 1223, `n` is the input vector length.
+Here, `T` is the number of iterations, `m` is the number of samples, and `n` is the number of input features, including the intercept column. For problem 001, `m` and `n` are the matrix row and column counts. Problem 002's bounds are for a dense tensor input. Space excludes input storage and any tensor conversion copies. Problem 014's complexity bounds assume `m >= n`. For problem 1223, `n` is the input vector length.
 
 *Difficulty follows the supplied problem screenshot. The current public page labels this problem Easy; platform labels and language variants may differ.*
 
@@ -25,6 +26,8 @@ Here, `T` is the number of iterations, `m` is the number of samples, and `n` is 
 
 - `easy/001/README.md`: matrix–vector product problem, example, solution, and reflection.
 - `easy/001/solution_v1.py`: the author's PyTorch matrix–vector multiplication implementation.
+- `easy/002/README.md`: matrix transpose problem, example, solution, and reflection.
+- `easy/002/solution_v1.py`: the author's PyTorch transpose implementation.
 - `medium/014/README.md`: normal-equation problem, example, solution explanation, and personal reflection.
 - `medium/014/solution_v1.py`: the author's PyTorch least-squares implementation.
 - `medium/015/README.md`: problem description, example, solution explanation, and personal reflection.
